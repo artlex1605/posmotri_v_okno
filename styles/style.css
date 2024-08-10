@@ -9,8 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   margin: auto;
-  /* padding-block-start: 133px; */
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -69,7 +70,6 @@ button:focus {
   align-items: end;
   column-gap: 30px;
   margin-inline: auto;
-  padding-block-start: 133px;
   inline-size: 1140px;
 }
 
