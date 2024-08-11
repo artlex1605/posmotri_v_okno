@@ -43,6 +43,12 @@ fieldset {
   border: none;
 }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+}
+
 button {
   border: none;
   padding: 0;
@@ -87,6 +93,7 @@ button:focus {
 
 .result__video {
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -110,6 +117,7 @@ button:focus {
 
 .search-form__label {
   display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -127,9 +135,6 @@ button:focus {
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   inline-size: 225px;
   block-size: 27px;
 }
@@ -177,6 +182,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
 
 .button {
   border: 1px solid currentColor;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
@@ -214,6 +220,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
 }
 
 .title {
+  font-family: Oswald;
   font-size: 75px;
   line-height: 0.94;
   text-transform: uppercase;
@@ -231,11 +238,6 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
   position: relative;
   overflow: auto;
   block-size: 298px;
-  scrollbar-width: 0;
-}
-
-.content__list::-webkit-scrollbar {
-  width: 0;
 }
 
 .content__list-item:not(:last-child) {
@@ -249,6 +251,14 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
   text-decoration: none;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
 .content__card-link_current {
   background-color: #545050;
 }
@@ -256,14 +266,6 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
 .content__video-card {
   display: flex;
   align-items: start;
-}
-
-.content__video-card:focus {
-  outline: none;
-}
-
-.content__video-card:focus {
-  outline: 1px solid currentColor;
 }
 
 .content__video-card:hover {
@@ -279,6 +281,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
 }
 
 .content__video-card-title {
+  font-family: Oswald;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
@@ -289,6 +292,8 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
 }
 
 .content__video-card-thumbnail {
+  object-fit: cover;
+  object-position: center;
   block-size: 103px;
   inline-size: 194px;
 }
