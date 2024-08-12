@@ -220,7 +220,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   line-height: 0.94;
   text-transform: uppercase;
@@ -281,10 +281,14 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  max-width: 192px;
+  overflow: hidden;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
